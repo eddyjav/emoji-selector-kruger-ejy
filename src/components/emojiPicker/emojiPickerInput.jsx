@@ -18,6 +18,7 @@ const EmojiPickerInput = () => {
   const handleForm = (e) => {
     e.preventDefault();
     setSend(msg);
+    document.getElementById("comment").value = "";
   };
 
   return (
@@ -57,6 +58,7 @@ const EmojiPickerInput = () => {
                 rows="1"
                 id="comment"
                 onChange={handleChange}
+                placeholder="Escribe algo"
               />
             </div>
             <div className="col-sm-1 col-xs-1 reply-recording">
