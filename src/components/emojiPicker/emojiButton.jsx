@@ -3,7 +3,11 @@ const EmojiButton = ({ emoji, onClick }) => {
     onClick(emoji);
   };
 
-  return <button onClick={handlerClick}>{emoji.symbol}</button>;
+  return (
+    <button className="search-emoji-b" onClick={handlerClick}>
+      {emoji.character}
+    </button>
+  );
 };
 
 export default EmojiButton;

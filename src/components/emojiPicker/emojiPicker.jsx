@@ -32,8 +32,8 @@ const EmojiPicker = (props, inputRef) => {
     if (!!q) {
       const search = emojiList.filter((emoji) => {
         return (
-          emoji.name.toLowerCase().includes(q) ||
-          emoji.keywords.toLowerCase().includes(q)
+          emoji.slug.toLowerCase().includes(q) ||
+          emoji.unicodeName.toLowerCase().includes(q)
         );
       });
 
@@ -62,23 +62,29 @@ const EmojiPicker = (props, inputRef) => {
     const prev = text.slice(0, cursosPosition);
     const next = text.slice(cursosPosition);
 
-    inputRef.current.value = prev + emoji.symbol + next;
-    inputRef.current.selectionStart = cursosPosition + emoji.symbol.length;
-    inputRef.current.selectionEnd = cursosPosition + emoji.symbol.length;
+    inputRef.current.value = prev + emoji.character + next;
+    inputRef.current.selectionStart = cursosPosition + emoji.character.length;
+    inputRef.current.selectionEnd = cursosPosition + emoji.character.length;
     inputRef.current.focus();
   };
   console.log(emojis);
 
   return (
     <div ref={containerRef}>
-      <button onClick={handleClickOpen}>🖖</button>
+      <button className="btn-emoji" onClick={handleClickOpen}>
+        {/* <i className="fa fa-smile-o fa-2x"></i> */}
+        {/* <i className="fa-regular fa-face-laugh fa-2x"></i> */}
+        <i>
+          <span className="material-symbols-rounded">add_reaction</span>
+        </i>
+      </button>
       {isOpen ? (
-        <div>
+        <div className="container-emoji-search-b">
           <EmojiSearch onSearch={handleSearch} />
           <div>
             {emojis.map((emoji) => (
               <EmojiButton
-                key={emoji.symbol}
+                key={emoji.slug}
                 emoji={emoji}
                 onClick={handleOnclickEmoji}
               />

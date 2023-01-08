@@ -8,7 +8,15 @@ const EmojiSearch = ({ onSearch }) => {
     onSearch(e);
   };
 
-  return <input type="text" onChange={handleChange} value={value} />;
+  return (
+    <input
+      className="i-search-emoji form-control"
+      type="text"
+      onChange={handleChange}
+      value={value}
+      placeholder="Buscar"
+    />
+  );
 };
 
 export default EmojiSearch;
