@@ -67,7 +67,7 @@ const EmojiPicker = (props, inputRef) => {
     inputRef.current.selectionEnd = cursosPosition + emoji.character.length;
     inputRef.current.focus();
   };
-  console.log(emojis);
+  // console.log(emojis);
 
   return (
     <div ref={containerRef}>
