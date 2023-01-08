@@ -1,5 +1,9 @@
 body {
-  background-color: #f7f7f7;
+  background-color: #edededf9;
+}
+
+.emoji-body {
+  margin-top: 50px;
 }
 
 .material-symbols-rounded {
@@ -58,7 +62,7 @@ body {
 }
 
 .message-main-receiver {
-  margin-left: 14px !important;
+  margin-left: 355px !important;
   padding: 10px 20px;
   max-width: 60%;
 }
@@ -66,7 +70,7 @@ body {
 .message-main-sender {
   /* margin-right: auto !important; */
   padding: 3px 1px !important;
-  margin-left: 140px !important;
+  margin-left: 110px !important;
   /* margin-bottom: 10px; */
   max-width: 60%;
 }
@@ -191,6 +195,14 @@ body {
   }
   .message {
     height: calc(100% - 140px);
+  }
+  .message-main-receiver {
+    margin-left: 14px !important;
+  }
+  .message-main-sender {
+    /* margin-right: auto !important; */
+    padding: 3px 1px !important;
+    margin-left: 150px !important;
   }
   .reply {
     height: 70px;

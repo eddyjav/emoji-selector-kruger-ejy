@@ -7,16 +7,16 @@ const EmojiPickerInput = () => {
   const refInput = useRef(null);
 
   return (
-    <div>
-      <input ref={refInput} />
-      <EmojiPicker ref={refInput} />
+    <div className="emoji-body">
+      {/* <input ref={refInput} />
+      <EmojiPicker ref={refInput} /> */}
 
       <div className="row">
         <div class="row message-body">
           <div class="col-sm-12 message-main-receiver">
             <div class="receiver">
               <div class="message-text">Hola KrugerStar! como estas</div>
-              <span class="message-time pull-right">Sun</span>
+              <span class="message-time pull-right">19:47</span>
             </div>
           </div>
         </div>
@@ -25,7 +25,7 @@ const EmojiPickerInput = () => {
           <div className="col-sm-12 message-main-sender">
             <div className="sender">
               <div className="message-text">I am doing nothing man!</div>
-              <span className="message-time pull-right">Sun</span>
+              <span className="message-time pull-right">19:50</span>
             </div>
           </div>
         </div>
@@ -36,12 +36,12 @@ const EmojiPickerInput = () => {
             {/* <i className="fa fa-smile-o fa-2x"></i> */}
           </div>
           <div className="col-sm-9 col-xs-9 reply-main">
-            <textarea
+            <input
               ref={refInput}
-              className=""
+              className="form-control"
               rows="1"
               id="comment"
-            ></textarea>
+            />
           </div>
           <div className="col-sm-1 col-xs-1 reply-recording">
             <i>
